@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
 
-function App() {
+export default function App() {
+  const nume='pauline';
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="border-solid border-2 border-gray-600">
+      <Header  name="todo-tracker"/>
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1> 
+
+    <h2>your name is {nume}</h2>
+
     </div>
-  );
+
+  )
 }
 
-export default App;
