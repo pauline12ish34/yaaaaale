@@ -1,14 +1,16 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import Button  from './Button'
+
+const Header = ({title,show,showAdd}) => {
 
 
-
-const Header = ({title}) => {
   return (
-   <header>
+   <header className='grid grid-cols-2  p-8'>
 
-<h2>{title}</h2>
+<h2 className='text-3xl font-bold underline'>{title}</h2>
 
+<Button bgcolor={showAdd ? 'red':'green'}  text={showAdd ? 'Close':'Add'} onClick={show}/>
+{/* bg-lime-600 */}
    </header>
   )
 }
@@ -16,7 +18,7 @@ const Header = ({title}) => {
 Header.defaultProps={
   title:'TaskTracker',
 }
-Header.protoTypes={
+Header.propTypes={
   title: PropTypes.string.isRequired
 }
 
